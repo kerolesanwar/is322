@@ -45,6 +45,15 @@ header[role="banner"] a:hover, header[role="banner"] a:focus {
 	background-image: -o-radial-gradient(ellipse closest-side, rgba(255,255,255,0.1), rgba(255,255,255,0));
 }
 
+.logo {
+	float: left;
+	margin: 0.35em 0 0.25em 0.7em;
+}
+
+.logo a, .logo img {
+	width: 100px;
+	height: 19px;
+}
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
