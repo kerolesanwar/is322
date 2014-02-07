@@ -27,6 +27,24 @@ header[role="banner"] {
 	background: linear-gradient(top, #111 0%,#222 100%);
 }							
 
+header[role="banner"] > div {
+	max-width: 65em;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: left;
+	position: relative;
+	-webkit-animation: fadein 0.4s ease-out 1;
+	-moz-animation: fadein 0.4s ease-out 1;
+	-ms-animation: fadein 0.4s ease-out 1;
+}
+header[role="banner"] a:hover, header[role="banner"] a:focus {
+	color: #fff;
+	background-image: -webkit-radial-gradient(ellipse closest-side, rgba(255,255,255,0.1), rgba(255,255,255,0));
+	background-image: -moz-radial-gradient(ellipse closest-side, rgba(255,255,255,0.1), rgba(255,255,255,0));
+	background-image: -ms-radial-gradient(ellipse closest-side, rgba(255,255,255,0.1), rgba(255,255,255,0));
+	background-image: -o-radial-gradient(ellipse closest-side, rgba(255,255,255,0.1), rgba(255,255,255,0));
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
