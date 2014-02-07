@@ -112,6 +112,32 @@ header[role="banner"] a:hover, header[role="banner"] a:focus {
 	right: 1em;
 	z-index: 1;
 }
+.nav {
+	margin: 0 -1em;
+	text-align: center;
+	text-transform: uppercase;
+}
+header[role="banner"] .nav {
+	border-top: 1px solid #333;
+	clear: left;
+	}
+.nav li {
+	display: inline-block;
+	position: relative;
+}
+.nav li a {
+	display: block;
+	padding: 1em;
+	border-left: 1px solid #333;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition:  all 0.3s ease-out;
+}
+.nav li:first-child a {
+	border-left: 0;
+}
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
