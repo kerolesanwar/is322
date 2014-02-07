@@ -69,7 +69,33 @@ header[role="banner"] a:hover, header[role="banner"] a:focus {
 .nav-anchors a.active {
 	color: #fff;
 }
-/*
+
+.search {
+	clear: both;
+	border-top: 1px solid #333;
+	padding: 0.625em 1em;
+	position: relative;
+}
+.search label {
+	display: none;	
+}
+.search input[type=search] {
+	background: url(images/icon_search.png) no-repeat 95% 50% #111;
+	color: #999;
+	border: 1px solid #333;
+	font-size: 0.8em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	 box-sizing: border-box; 
+	padding: 0.6em 1.3em 0.6em 0.9em;										
+	width:100%
+}
+															
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
