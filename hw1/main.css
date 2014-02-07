@@ -95,7 +95,23 @@ header[role="banner"] a:hover, header[role="banner"] a:focus {
 	padding: 0.6em 1.3em 0.6em 0.9em;										
 	width:100%
 }
-															
+
+.search input[type=search]:hover, .search input[type=search]:focus {
+	border-color: #fff;
+	color: #fff;
+}
+.search input[type=submit] {
+	background: none;
+	padding: 0;
+	border: 0;
+	width: 2em;
+	height: 2em;
+	text-indent: -99999em;
+	position: absolute;
+	top: 0;
+	right: 1em;
+	z-index: 1;
+}
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
