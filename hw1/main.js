@@ -71,4 +71,29 @@ function buildSwipe() {
 	    			loadImg(w.mySwipe.getPos()+1);
 							}, false);
 }
+
+//Dynamically Load Images
+function loadImg(index) {
+	var lis = imgList.find('li'),
+		li = lis.eq(index),
+		imgSrc = li.attr('data-imgsrc');
+	if(!swipeEnabled) {					
+		lis.hide();		
+		li.show();
+	}
+	if(li.html() === "") { //If li is empty
+		var img = new Image();
+		imgList.addClass('loading');
+		$(img).load(function () { //Load image						
+			$(this).hide();
+			li.removeClass('loading');
+			$(this).fadeIn();
+		}).error(function () {
+			//notify the user that the image could not be loaded
+		}).attr('src', imgSrc);
+		$('<img />'>.attr('src', imgSrc).appendTo(li);
+	}
+}
+
+
 }
