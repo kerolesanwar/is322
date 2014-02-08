@@ -61,6 +61,7 @@ p {
 	margin: 0 0 1em;
 }
 
+
 label {
 	cursor: pointer;
 	display: inline-block;
@@ -84,6 +85,35 @@ label {
 	height: 2.4em;
 	text-transform: uppercase;
 }
+
+input, textarea {
+	display: inline-block;
+	font-size: 1em;
+	background: #fff;
+	background: rgba(255,255,255,0.5);
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #333;
+	border-left: 0;
+	-webkit-border-radius: 0;
+	-webkit-border-top-right-radius: 0.5em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	-moz-border-radius-topright: 0.5em;
+	-moz-border-radius-bottomright: 0.5em;
+	border-top-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;															padding: 0.25em 0.6em;																	width: 50%;
+	float: left;
+	height: 2.4em;
+}
+
+input[type=submit] {
+	cursor: pointer;
+}
+																		}
 
 header[role="banner"] {
 	position: relative;
