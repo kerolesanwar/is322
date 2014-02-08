@@ -183,6 +183,20 @@ $('.aux header a').click(function() {
 	return false;
 });
 
-
+//Geolocation
+$('.find-nearby').click(function(){
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+	} 
+});
+								
+	function geoSuccess(position) {
+		var la = position.coords.latitude,
+			lon = position.coords.longitude;
+			alert('Your latitude is '+la+' and your longitude is '+lon); //Return latitude and longitude. Obviously in a live environment we would redirect to a store results page using window.location
+	}
+	function geoError() {			
+		alert('There was a problem determining your location.');
+}
 
 })(this);
