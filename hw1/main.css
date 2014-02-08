@@ -162,6 +162,25 @@ header[role="banner"] .nav {
 	margin: 0 auto;
 	padding: 1em;
 }
+
+.product-overview {
+	margin-bottom: 1em;
+}
+
+.price {
+	font-weght: bold;
+	display: inline-block;
+}
+.star {
+	display: inline-block;
+	margin 0 0.5em;
+	font-size: 0.9em;
+}
+
+.star li {
+	display: inline-block;
+	color: #9d0000;
+}
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
