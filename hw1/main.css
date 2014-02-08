@@ -367,6 +367,49 @@ header[role="banner"] .nav {
 .related-list {
 	position: relative;
 }
+
+.related-products ul {
+	margin: 0 -0.5em;
+	position: relative;
+	z-index: 1;
+	left: 0;
+}
+.related-products li {
+	float: left;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0.5em;
+	width: 50%;
+}
+
+.related-products li a {
+	display: block;
+	border: 1px solid #b0b3ad;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+	-webkit-transition: all 0.3s ease-out;
+}
+
+.related-products li a:hover, .related-products li a:focus {
+	border-color: #fff;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.related-products li img {
+	display: block;
+	width: 100%;
+}
+
+.related-products li:last-child {
+	margin: 0;
+}
+
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
