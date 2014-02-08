@@ -181,6 +181,35 @@ header[role="banner"] .nav {
 	display: inline-block;
 	color: #9d0000;
 }
+
+/*Product Images*/
+.product-img {
+	position: relative;
+	text-align: center;
+}
+
+.img-container {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto 0.5em;
+	background: #fff;
+	border: 1px solid #d7dad3;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+
+#img-list {
+	position: relative;
+	left: 0;
+	width: 100%;
+}
+
+
+
+
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
