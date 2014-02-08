@@ -47,3 +47,24 @@ function buildGallery() {
 		updateNav(pos);
 	});
 }
+
+Modernizr.load({
+	test:Modernizr.touch && Modernizr.csstransitions,
+	yep:'js/swipe.js',
+	complete: function() {
+		if(Modernizr.touch && Modernizr.csstransitions){
+			swipeEnabled = true;
+			buildSwipe();
+		}
+	}
+});
+
+function buildSwipe() {
+	//Initialize Swipe.js
+	w.mySwipe = new Swipe (document.getElementbyId('img-list'), {
+		callback: function(event, index, elem) {
+			updateNav(index);
+			loadImg(index+1);
+		}
+	});
+}
