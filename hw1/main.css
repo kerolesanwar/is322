@@ -410,6 +410,52 @@ header[role="banner"] .nav {
 	margin: 0;
 }
 
+/*Reviews*/
+.reviews {
+	position: relative;
+	border-top: 1px solid #808080;
+	border-top: 1px solid rgba(255,255,255,0.5);
+}
+.reviews-list {
+	border-top: 1px solid #b0b3ad;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	margin-bottom: 1em;
+}
+.reviews-list > li {
+	overflow: hidden;
+	padding: 2em 0;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-bottom: 1px solid #b0b3ad;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.reviews-list .star {
+	margin-left: 0;
+	}
+.reviews-list img {
+	max-width: 4em;
+	max-height: 4em;
+	border: 1px solid #b0b3ad;
+	float: left;
+	padding: 0;
+	margin: 0 1em 1em 0;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+.review-meta {
+	font-size: 0.8em;
+}
+.review-content {
+	clear: left;
+}
+.review-content p:last-child {
+	margin: 0;
+}
+								
+
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
