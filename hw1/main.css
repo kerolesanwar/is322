@@ -536,6 +536,28 @@ header[role="banner"] .nav {
 	-ms-border-radius: 0.5em;
 	border-radius: 0.5em;
 }
+
+.top:after {
+	content: ' ▲';
+}
+
+/*Aux Pages*/
+.back-nav a {
+	display: block;
+	padding: 1em;
+	color: #fff;
+	background: #111;
+	background: #111; /* Old browsers */
+	background: -moz-linear-gradient(top, #111 0%, #222 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#111), color-stop(100%,#222)); 
+	background: -webkit-linear-gradient(top, #111 0%,#222 100%); 
+	background: -o-linear-gradient(top, #111 0%,#222 100%);
+	background: -ms-linear-gradient(top, #111 0%,#222 100%); /* IE10+ */
+	background: linear-gradient(top, #111 0%,#222 100%); /* W3C */
+}
+.content-snippet {
+	padding: 1em;
+}
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
