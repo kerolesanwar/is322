@@ -19,6 +19,13 @@ function checkMobile() {
      }
 }
 
+function setImg() {
+	var container = $('#img-container'),
+		nav = $('#product-img').find('nav'),
+		imgList = Object,
+		current = 0,
+		swipeEnabled = false;
+
 function buildGallery() {
 	container.html('<div id="img-list"><ul /></div>');
 	imgList = $('#img-list');
@@ -46,19 +53,20 @@ function buildGallery() {
 		}
 		updateNav(pos);
 	});
-}
 
-Modernizr.load({
-	test:Modernizr.touch && Modernizr.csstransitions,
-	yep:'js/swipe.js',
-	complete: function() {
-		if(Modernizr.touch && Modernizr.csstransitions){
-			swipeEnabled = true;
-			buildSwipe();
-		}
+
+	Modernizr.load({
+		test:Modernizr.touch && Modernizr.csstransitions,
+		yep:'js/swipe.js',
+		complete: function() {
+			if(Modernizr.touch && Modernizr.csstransitions){
+				swipeEnabled = true;
+				buildSwipe();
+			}
 	}
-});
-
+	});
+	loadImg(0); //Load initial image
+}
 function buildSwipe() {
 	//Initialize Swipe.js
 	w.mySwipe = new Swipe (document.getElementbyId('img-list'), {
@@ -95,5 +103,13 @@ function loadImg(index) {
 	}
 }
 
+function updateNav(pos) {
+	nav.find('li').removeClass('active');
+	nav.find('li:eq('+pos+')').addClass('active');
+}
+
+build Gallery();
+
+}
 
 }
