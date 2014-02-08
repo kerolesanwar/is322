@@ -255,7 +255,39 @@ header[role="banner"] .nav {
 	height: auto;
 }
 
+/*Product Form*/
+.product-form {
+	margin: 0 0 0.5em;
+}
+.field {
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0.75em 0 0.75em 0;
+	width: 50%;
+	float: left;
+	overflow: hidden;
+}
 
+.qty-field {
+	padding-right: 0.5em;
+}
+.size-field {
+	padding-left: 0.5em;
+}
+.submit-form {
+	clear: both;
+	margin-bottom: 1em;
+}
+.submit-form input {
+	display: block;
+	width: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
