@@ -558,6 +558,35 @@ header[role="banner"] .nav {
 .content-snippet {
 	padding: 1em;
 }
+
+.btn {
+	background: #9d0000; /* Old browsers */
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	line-height: 1;
+	padding: 0.7em 1em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+	border: 1px solid #770000;
+	-webkit-transition: -webkit-box-shadow 0.3s ease-out;
+	-moz-transition: -moz-box-shadow 0.3s ease-out;											-ms-transition: -ms-box-shadow 0.3s ease-out; 											   -o-transition: -o-box-shadow 0.3s ease-out;
+	transition:  box-shadow 0.3s ease-out;	
+}
+
+.btn:hover, .btn:focus {
+	background: #710000;
+	border-color: #fff;
+	color: #fff;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
