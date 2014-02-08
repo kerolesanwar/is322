@@ -67,4 +67,8 @@ function buildSwipe() {
 			loadImg(index+1);
 		}
 	});
+	imgList.addEventListener('touchstart', function(event) {
+	    			loadImg(w.mySwipe.getPos()+1);
+							}, false);
+}
 }
