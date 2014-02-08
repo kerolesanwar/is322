@@ -505,6 +505,37 @@ header[role="banner"] .nav {
 .footer li a {
 	padding-top: 1.2em;
 }
+
+.service-links {
+	text-align: center;
+}
+.service-links li {
+	margin: 0 0.5em;
+}
+.service-links li:first-child {
+	margin-left: 0;
+}
+.service-links li:last-child {
+	margin-right: 0;
+}
+.service-links li a {
+	border: 0;
+	padding: 0.2em;
+	font-size: 0.7em;
+}
+.service-links li.tel a {
+	background: #333;
+	background: rgba(0,0,0,0.3);
+	color: #999;
+	border: 1px solid #444;
+	text-align: center;
+	padding: 0.3em 0.7em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
