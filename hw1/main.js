@@ -1,3 +1,16 @@
+(function(w) {
+	var sw = document.body.clientWidth,
+		sh = document.body.clientHeight,
+		breakpoint = 650,
+		speed = 800,
+		mobile = true;
+											
+	$(document).ready(function() {
+		checkMobile();
+		setNav();		
+		setImg();		
+	});
+
 $(w).resize(function(){ //Update dimensions on resize
 	sw = document.body.clientWidth;
 	sh = document.body.clientHeight;
@@ -112,4 +125,4 @@ build Gallery();
 
 }
 
-}
+})(this);
