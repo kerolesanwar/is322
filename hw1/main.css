@@ -350,6 +350,11 @@ header[role="banner"] .nav {
 	padding: 0 1em 1em;
 }
 
+/*Product Description*/
+.product-description header {
+	border-top: 1px solid #333;
+}
+
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
