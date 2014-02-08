@@ -355,6 +355,18 @@ header[role="banner"] .nav {
 	border-top: 1px solid #333;
 }
 
+/*Related Products*/
+.related-products {
+	position: relative;
+	border-top: 1px solid #808080;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-bottom: 1px solid #b0b3ad;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.related-list {
+	position: relative;
+}
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
