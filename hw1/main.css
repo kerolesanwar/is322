@@ -207,6 +207,53 @@ header[role="banner"] .nav {
 	width: 100%;
 }
 
+.product-img nav {
+	overflow: hidden;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.product-img nav li {
+	display: inline-block;
+	margin: 0 0.2em;
+	border: 1px solid #d7dad3;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition:  all 0.3s ease-out;
+}
+
+.product-img nav li:hover, .product-img nav li:focus {
+	border-color: #b0b3ad;
+}
+.product-img nav li.active {
+	border-color: #9d0000;
+}
+.product-img nav li:last-child {
+	margin: 0;
+}
+.product-img nav a {
+	display: block;
+}
+.product-img nav a.active {
+	border-color: #81d8d0;
+}
+.product-img nav li {
+	min-width: 4em;
+	min-height: 1em;
+}
+.product-img nav img {
+	display: block;
+	width: 4em;
+	height: auto;
+}
 
 
 
