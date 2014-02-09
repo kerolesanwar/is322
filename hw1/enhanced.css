@@ -64,3 +64,26 @@ header[role="banner"] .nav {
 	padding-left: 2em;
 	margin-left: 50%;
 }
+
+/*Aux content*/
+.aux {
+	padding: 1em 0;
+}
+.aux header {
+	cursor: default;
+	padding: 0;
+	border: 0;
+
+}
+.aux header a:after, .aux header a.open:after {
+	content: "";
+}
+[aria-hidden="true"] {
+	display: block;
+}
+.product-description header {
+	display: none;
+}
+.reviews {
+	padding-bottom: 3em;
+}
