@@ -47,3 +47,20 @@ header[role="banner"] .nav {
 .queryselectorall .search, .queryselectorall [role="banner"] .nav {
 	display: block;
 }
+
+.product-main {
+	padding-bottom: 2em;
+}
+.product-img {
+	float: left;
+	width: 50%;
+	height: auto;
+	margin-top: -4.8em;
+}
+.product-main > header {
+	padding-top: 1em;
+}
+.product-main > header, .product-desc, .product-form, .product-utils, .product-description {
+	padding-left: 2em;
+	margin-left: 50%;
+}
