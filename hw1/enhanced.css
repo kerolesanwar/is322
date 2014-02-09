@@ -142,3 +142,25 @@ header[role="banner"] .nav {
 	max-width: 11em;
 }
 
+/*Footer*/
+	.footer ul {
+	margin: 0;	
+}
+.footer .nav {
+	float: left;	
+}
+.footer .nav li a {
+	padding: 1.3em;
+	line-height: 1;
+}
+.footer ul.service-links {
+	float: right;
+	margin-top: 0.9em;
+}
+.service-links li.tel {
+	display: inline-block;
+}	
+.service-links li.tel a {
+	display: inline;	
+}
+
