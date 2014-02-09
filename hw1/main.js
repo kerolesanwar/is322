@@ -103,7 +103,8 @@ function buildGallery() {
 }
 function buildSwipe() {
 	//Initialize Swipe.js
-	w.mySwipe = new Swipe (document.getElementbyId('img-list'), {
+	var imgList = document.getElementById('img-list');
+	w.mySwipe = new Swipe (imgList, {
 		callback: function(event, index, elem) {
 			updateNav(index);
 			loadImg(index+1);
