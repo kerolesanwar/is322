@@ -221,7 +221,7 @@ header[role="banner"] a:hover, header[role="banner"] a:focus {
 	display: none;	
 }
 .search input[type=search] {
-	background: url(http://bradfrostweb.com/demo/mobile-first/images/icon_search.png) no-repeat 95% 50% #111;
+	background: url(images/icon_search.png) no-repeat 95% 50% #111;
 	color: #999;
 	border: 1px solid #333;
 	font-size: 0.8em;
