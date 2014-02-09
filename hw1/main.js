@@ -61,12 +61,14 @@ function setImg() {
 function buildGallery() {
 	container.html('<div id="img-list"><ul /></div>');
 	imgList = $('#img-list');
-	nav.find('a:first').addClass('active');
+	nav.find('li:first').addClass('active');
+
+	var arr = '';
 
 	//For Each Navigation Link
 	nav.find('a').each(function() {
-		 var $this = $(this);
-	         var href = $this.attr('href');
+		 var $this = $(this), 
+	        	 href = $this.attr('href');
 
 		  //Prepare list item with image source in data attribute
 		  arr += '<li data-imgsrc="'+href+'"></li>';
@@ -81,7 +83,7 @@ function buildGallery() {
 		e.preventDefault();
 		loadImg(pos);
 		if(swipeEnabled) {
-			mySwipe.slide(index, 300);
+			mySwipe.slide(pos, 300);
 		}
 		updateNav(pos);
 	});
@@ -91,11 +93,11 @@ function buildGallery() {
 		test:Modernizr.touch && Modernizr.csstransitions,
 		yep:'js/swipe.js',
 		complete: function() {
-			if(Modernizr.touch && Modernizr.csstransitions){
+			if(w.Swipe) {
 				swipeEnabled = true;
 				buildSwipe();
 			}
-	}
+		}
 	});
 	loadImg(0); //Load initial image
 }
