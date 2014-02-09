@@ -734,7 +734,26 @@ header[role="banner"] .nav {
 		width: 33.3333333%;
 	}
 }
+/************Animations**************/
+@-webkit-keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1;  }
+}
+@-moz-keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1;  }
+}
+@-ms-keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1;  }
+}
 
+/************Resources**************/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
