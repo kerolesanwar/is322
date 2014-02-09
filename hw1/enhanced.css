@@ -87,3 +87,31 @@ header[role="banner"] .nav {
 .reviews {
 	padding-bottom: 3em;
 }
+
+/*Related*/
+.related-products {
+	clear: both;
+	border: 0;
+}
+.related-products header {
+	border: 0;
+}
+.related-products li {
+	width: 16.6666667%;
+}
+.related-nav a {
+	position: absolute;
+	top: 50%;
+	left: -2.5em;
+	z-index: 0;
+	display: block;
+	height: 160px;
+	width: 2.5em;
+	text-indent: -99999em;
+	background: url(http://www.tiffany.com/Shared/images/misc/arrow2_left_on.gif) no-repeat 50% -65px;	
+}
+.related-nav a.nav-next {
+	left: auto;
+	right: -2.5em;
+	background: url(http://www.tiffany.com/Shared/images/misc/arrow2_right_on.gif) no-repeat 50% -65px;	
+}
