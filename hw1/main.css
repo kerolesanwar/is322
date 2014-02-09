@@ -727,6 +727,14 @@ header[role="banner"] .nav {
 	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
 	box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+
+/************Mobile Queries**************/
+@media screen and (min-width: 28.75em) {
+.related-products li {
+		width: 33.3333333%;
+	}
+}
+
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
