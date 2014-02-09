@@ -115,3 +115,30 @@ header[role="banner"] .nav {
 	right: -2.5em;
 	background: url(http://www.tiffany.com/Shared/images/misc/arrow2_right_on.gif) no-repeat 50% -65px;	
 }
+
+/*Reviews*/
+	.reviews {
+	border: 0;
+}
+.reviews-list img {
+	max-width: 6em;
+	max-height: 6em;
+	margin: 0 1em 0 0;
+}
+.review-meta {
+	font-size: 1em;
+	float: left;
+	width: 30%;
+	padding-top: 0.8em;
+}
+.review-content {
+	clear: none;
+	padding-top: 0.8em;
+	margin-left: 50%;
+}
+.reviews .btn {
+	display: block;
+	margin: 0 auto;
+	max-width: 11em;
+}
+
