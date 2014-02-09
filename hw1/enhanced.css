@@ -1,0 +1,16 @@
+.logo {
+	margin: 0;
+	font-size: 1.6em;
+	position: relative;
+	z-index: 1;
+}
+.logo a {
+	display: block;
+	width: 120px;
+	height: auto;
+	padding: 0.6em 1em 0.4em 0.7em;
+}
+.logo img {
+	width: 120px;
+	height: auto;	
+}
