@@ -29,3 +29,21 @@
 .nav-anchors a.active {
 	color: #fff;
 }
+
+header[role="banner"] .nav {
+	float: left;
+	clear: none;
+	margin: 0;
+	border-top: 0;
+}
+.search {
+	border: 0;
+	padding: 0;
+	position: absolute;
+	top: 0.8em;
+	right: 1em;
+	width: 10em;
+}
+.queryselectorall .search, .queryselectorall [role="banner"] .nav {
+	display: block;
+}
