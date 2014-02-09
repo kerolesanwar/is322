@@ -163,4 +163,13 @@ header[role="banner"] .nav {
 .service-links li.tel a {
 	display: inline;	
 }
+@media screen and (min-width: 40.5em) and (max-width: 60em) {
+	.product-img {
+		width: 60%;
+	}
+	.product-main > header, .product-desc, .product-form, .product-utils, .product-description {
+		margin-left: 60%;
+		padding-left: 1em;
+	}
+}
 
