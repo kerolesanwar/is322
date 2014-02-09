@@ -172,4 +172,44 @@ header[role="banner"] .nav {
 		padding-left: 1em;
 	}
 }
-
+@media screen and (min-width: 60em) {
+	.product-img {
+		width: 67%;
+	}
+	.product-main > header, .product-desc, .product-form, .product-utils, .product-description {
+		padding-left: 2em;
+		margin-left: 67%;
+	}
+	.product-share {
+		margin: 0;
+		width: 19%;
+		float: left;
+	}
+	.img-container {
+		margin-left: 7em;
+	}
+	.product-img nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 6em;
+	}
+	.product-img nav li {
+		display: block;
+		margin: 0 0 1em;
+	}
+	.product-img nav img {
+		width: auto;
+	}
+	.submit-form input {
+		position: relative;
+		z-index: 1;
+	}
+	.product-utils {
+		position: relative;
+		z-index: 0;
+	}
+	.reviews-list > li {
+		padding: 2em 7em;
+	}
+}
