@@ -253,6 +253,12 @@ header[role="banner"] a:hover, header[role="banner"] a:focus {
 	right: 1em;
 	z-index: 1;
 }
+
+/*Hide Search and Nav only if Advanced JS is present*/
+.queryselectorall .search, .queryselectorall [role="banner"] .nav {
+	display: none;
+}
+
 .nav {
 	margin: 0 -1em;
 	text-align: center;
