@@ -80,7 +80,7 @@
 	 		imgList.find('ul').append(arr);
 
 	 		//Nav Thumbnail Click
-	 		nav.on('click, 'a', function(e) {
+	 		nav.on('click', 'a', function(e) {
 				var pos = $(this).parent().index();
 				e.preventDefault();
 				loadImg(pos);
@@ -202,6 +202,5 @@
 	}
 	function geoError() {			
 		alert('There was a problem determining your location.');
-	}	
-
+	}
 })(this);
