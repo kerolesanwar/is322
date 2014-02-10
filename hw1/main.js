@@ -11,45 +11,47 @@
 		setImg();		
 	});
 
-$(w).resize(function(){ //Update dimensions on resize
-	sw = document.body.clientWidth;
-	sh = document.body.clientHeight;
-	checkMobile();
-});
-
-//Check if Mobile
-function checkMobile() {
-  mobile = (sw > breakpoint) ? false : true;
-
-    if (!mobile) { //If Not Mobile
-        loadAux(); 
-	$('.aux header a').addClass('disabled').addClass('open');
-	$('[role="tabpanel"],#nav,#search').show(); //Show full navigation and search
-     } else { //Hide 
-              if(!$('#nav-anchors a').hasClass('active')) {
-                    $('#nav,#search').hide(); //Hide full navigation and search
-               }
-     }
-}
-//Toggle navigation for small screens
-function setNav() {
-	var $anchorLinks = $('#nav-anchors').find('a');
-	$anchorLinks.click(function(e){
-		e.preventDefault();
-		var $this = $(this),
-				thisHref = $this.attr('href');
-		$('.reveal').hide();			
-		if($this.hasClass('active')) {				
-			$this.removeClass('active');	
-			$(thisHref).hide();								
-		} else {		
-			$anchorLinks.removeClass('active');		
-			$this.addClass('active');
-			$(thisHref).show();
-		}
+	$(w).resize(function(){ //Update dimensions on resize
+		sw = document.body.clientWidth;
+		sh = document.body.clientHeight;
+		checkMobile();
 	});
 
-}
+	//Check if Mobile
+	function checkMobile() {
+		mobile = (sw > breakpoint) ? false : true;
+		if (!mobile) { //If Not Mobile
+			loadAux();
+			$('.aux header a').addClass('disabled').addClass('open');
+			$('[role="tabpanel"],#nav,#search').show(); //Show full navigation and search
+		} else { //Hide 
+			if(!$('#nav-anchors a').hasClass('active')) {
+			$('#nav,#search').hide();
+			}
+		}
+	}
+	
+	//Toggle navigation for small screens
+	function setNav() {
+		var $anchorLinks = $('#nav-anchors').find('a');
+		$anchorLinks.click(function(e){
+			e.preventDefault();
+			var $this = $(this),
+				thisHref = $this.attr('href');
+			$('.reveal').hide();
+			if($this.hasClass('active')) {
+				$this.removeClass('active');
+				$(thisHref).hide();
+			} else {
+				$anchorLinks.removeClass('active');
+				$this.addClass('active');
+				$(thisHref).show();
+			}
+		});
+	}
+		
+
+
 
 function setImg() {
 	var container = $('#img-container'),
