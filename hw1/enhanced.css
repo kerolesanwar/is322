@@ -28,18 +28,7 @@ h2 {
 }
 
 .nav-anchors {
-	float: right;
-}
-.nav-anchors li {
-	display: inline-block;
-}
-.nav-anchors a {
-	display: block;
-	padding: 0.75em 0.8em;
-	border-left: 1px solid #333;
-}
-.nav-anchors a.active {
-	color: #fff;
+	display: none;
 }
 
 header[role="banner"] .nav {
@@ -120,16 +109,16 @@ header[role="banner"] .nav {
 	height: 160px;
 	width: 2.5em;
 	text-indent: -99999em;
-	background: url(http://www.tiffany.com/Shared/images/misc/arrow2_left_on.gif) no-repeat 50% -65px;	
+	background: url(images/arrow2_left_on.gif) no-repeat 50% -65px;	
 }
 .related-nav a.nav-next {
 	left: auto;
 	right: -2.5em;
-	background: url(http://www.tiffany.com/Shared/images/misc/arrow2_right_on.gif) no-repeat 50% -65px;	
+	background: url(images/arrow2_right_on.gif) no-repeat 50% -65px;	
 }
 
 /*Reviews*/
-	.reviews {
+.reviews {
 	border: 0;
 }
 .reviews-list img {
@@ -155,7 +144,7 @@ header[role="banner"] .nav {
 }
 
 /*Footer*/
-	.footer ul {
+.footer ul {
 	margin: 0;	
 }
 .footer .nav {
