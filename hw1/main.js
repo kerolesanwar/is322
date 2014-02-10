@@ -53,147 +53,147 @@
 
 
 
-function setImg() {
-	var container = $('#img-container'),
-		nav = $('#product-img').find('nav'),
-		imgList = Object,
-		current = 0,
-		swipeEnabled = false;
+	function setImg() {
+		var container = $('#img-container'),
+			nav = $('#product-img').find('nav'),
+			imgList = Object,
+			current = 0,
+			swipeEnabled = false;
 
-function buildGallery() {
-	container.html('<div id="img-list"><ul /></div>');
-	imgList = $('#img-list');
-	nav.find('li:first').addClass('active');
+		function buildGallery() {
+			container.html('<div id="img-list"><ul /></div>');
+			imgList = $('#img-list');
+			nav.find('li:first').addClass('active');
 
-	var arr = '';
+			var arr = '';
 
-	//For Each Navigation Link
-	nav.find('a').each(function() {
-		 var $this = $(this), 
-	        	 href = $this.attr('href');
+			//For Each Navigation Link
+			nav.find('a').each(function() {
+				 var $this = $(this), 
+	        			 href = $this.attr('href');
 
-		  //Prepare list item with image source in data attribute
-		  arr += '<li data-imgsrc="'+href+'"></li>';
-	 });
+		  		//Prepare list item with image source in data attribute
+		  		arr += '<li data-imgsrc="'+href+'"></li>';
+	 		});
 
-	 //Append to #img-list
-	 imgList.find('ul').append(arr);
+	 		//Append to #img-list
+	 		imgList.find('ul').append(arr);
 
-	 //Nav Thumbnail Click
-	 nav.on('click, 'a', function(e) {
-		var pos = $(this).parent().index();
-		e.preventDefault();
-		loadImg(pos);
-		if(swipeEnabled) {
-			mySwipe.slide(pos, 300);
+	 		//Nav Thumbnail Click
+	 		nav.on('click, 'a', function(e) {
+				var pos = $(this).parent().index();
+				e.preventDefault();
+				loadImg(pos);
+				if(swipeEnabled) {
+					mySwipe.slide(pos, 300);
+				}	
+				updateNav(pos);
+			});
+
+
+			Modernizr.load({
+			  test:Modernizr.touch && Modernizr.csstransitions,
+			  yep : 'js/swipe.js',
+			  complete: function() {
+					if(w.Swipe) {
+						swipeEnabled = true;
+						buildSwipe();
+					}
+			  }
+			});
+			loadImg(0); //Load initial image
 		}
-		updateNav(pos);
-	});
+		function buildSwipe() {
+			//Initialize Swipe.js
+			var imgList = document.getElementById('img-list');
+			w.mySwipe = new Swipe(imgList, {
+				callback: function(event, index, elem) {
+					updateNav(index);
+					loadImg(index+1);
+				}
+			});
+			imgList.addEventListener('touchstart', function(event) {
+	    		loadImg(w.mySwipe.getPos()+1);
+			}, false);
+		}
 
-
-	Modernizr.load({
-		test:Modernizr.touch && Modernizr.csstransitions,
-		yep:'js/swipe.js',
-		complete: function() {
-			if(w.Swipe) {
-				swipeEnabled = true;
-				buildSwipe();
+		//Dynamically Load Images
+		function loadImg(index) {
+			var lis = imgList.find('li'),
+				li = lis.eq(index),
+				imgSrc = li.attr('data-imgsrc');
+			if(!swipeEnabled) {					
+				lis.hide();		
+				li.show();
+			}
+			if(li.html() === "") { //If li is empty
+				var img = new Image();
+				imgList.addClass('loading');
+				$(img).load(function () { //Load image						
+					$(this).hide();
+					li.removeClass('loading');
+					$(this).fadeIn();
+				}).error(function () {
+					//notify the user that the image could not be loaded
+				}).attr('src', imgSrc);
+				$('<img />').attr('src', imgSrc).appendTo(li);
 			}
 		}
-	});
-	loadImg(0); //Load initial image
-}
-function buildSwipe() {
-	//Initialize Swipe.js
-	var imgList = document.getElementById('img-list');
-	w.mySwipe = new Swipe (imgList, {
-		callback: function(event, index, elem) {
-			updateNav(index);
-			loadImg(index+1);
+
+		function updateNav(pos) {
+			nav.find('li').removeClass('active');
+			nav.find('li:eq('+pos+')').addClass('active');
 		}
-	});
-	imgList.addEventListener('touchstart', function(event) {
-	    			loadImg(w.mySwipe.getPos()+1);
-							}, false);
-}
 
-//Dynamically Load Images
-function loadImg(index) {
-	var lis = imgList.find('li'),
-		li = lis.eq(index),
-		imgSrc = li.attr('data-imgsrc');
-	if(!swipeEnabled) {					
-		lis.hide();		
-		li.show();
+		build Gallery();
+
 	}
-	if(li.html() === "") { //If li is empty
-		var img = new Image();
-		imgList.addClass('loading');
-		$(img).load(function () { //Load image						
-			$(this).hide();
-			li.removeClass('loading');
-			$(this).fadeIn();
-		}).error(function () {
-			//notify the user that the image could not be loaded
-		}).attr('src', imgSrc);
-		$('<img />'>.attr('src', imgSrc).appendTo(li);
+
+	//Set up Auxiliary content
+	$('.aux header a').addClass('disabled');
+
+	function loadAux() {
+		var $aux = $('.aux');
+		$aux.each(function(index) {
+			var $this = $(this),
+				auxLink = $this.find('a'), 
+				auxFragment = auxLink.attr('href'),			
+				auxContent = $this.find('[role=tabpanel]');
+			if(auxContent.size()===0 && $this.hasClass('loaded')===false){
+				loadContent(auxFragment,$this);
+			}
+		});
 	}
-}
+	function loadContent(src,container) { //Load Tab Content
+		container.addClass('loaded');
+		$('<div role="tabpanel" />').load(src +' #content > div',function() {
+			$(this).appendTo(container);
+		});
+	}
 
-function updateNav(pos) {
-	nav.find('li').removeClass('active');
-	nav.find('li:eq('+pos+')').addClass('active');
-}
-
-build Gallery();
-
-}
-
-//Set up Auxiliary content
-$('.aux header a').addClass('disabled');
-
-function loadAux() {
-	var $aux = $('.aux');
-	$aux.each(function(index) {
+	$('.aux header a').click(function() {
 		var $this = $(this),
-			auxLink = $this.find('a'), 
-			auxFragment = auxLink.attr('href'),			
-			auxContent = $this.find('[role=tabpanel]');
-		if(auxContent.size()===0 && $this.hasClass('loaded')===false){
-			loadContent(auxFragment,$this);
-		}
+			thisHref = $this.attr('href'),
+			tabParent = $(this).parents('section'),
+			tabPanel = tabParent.find('[role=tabpanel]');
+		if(mobile) { //if Mobile
+			if(tabPanel.size()===0) { //Load content if not present
+				loadContent(thisHref,tabParent);
+				$this.addClass('open');
+			} else { //Toggle 
+				tabPanel.toggle();					
+				$this.toggleClass('open');
+			}
+		} 
+		return false;
 	});
-}
-function loadContent(src,container) { //Load Tab Content
-	container.addClass('loaded');
-	$('<div role="tabpanel" />').load(src +' #content > div',function() {
-		$(this).appendTo(container);
+
+	//Geolocation
+	$('.find-nearby').click(function(){
+		if (navigator.geolocation) {
+		  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+		} 
 	});
-}
-
-$('.aux header a').click(function() {
-	var $this = $(this),
-		thisHref = $this.attr('href'),
-		tabParent = $(this).parents('section'),
-		tabPanel = tabParent.find('[role=tabpanel]');
-	if(mobile) { //if Mobile
-		if(tabPanel.size()===0) { //Load content if not present
-			loadContent(thisHref,tabParent);
-			$this.addClass('open');
-		} else { //Toggle 
-			tabPanel.toggle();					
-			$this.toggleClass('open');
-		}
-	} 
-	return false;
-});
-
-//Geolocation
-$('.find-nearby').click(function(){
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
-	} 
-});
 								
 	function geoSuccess(position) {
 		var la = position.coords.latitude,
@@ -202,6 +202,6 @@ $('.find-nearby').click(function(){
 	}
 	function geoError() {			
 		alert('There was a problem determining your location.');
-}
+	}	
 
 })(this);
